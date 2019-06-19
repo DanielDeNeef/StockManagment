@@ -1,24 +1,60 @@
 package stockManagementSystem.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Callback;
 import stockManagementSystem.connectDB.ConnectDB;
 import stockManagementSystem.model.Article;
 
 import java.math.BigDecimal;
-import java.sql.Connection;
+import java.net.URL;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Currency;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller{
 private ConnectDB connectDB = new ConnectDB();
 
-    @FXML
-    private TextField nameTag;
+//Fields from the Article.fxml file
+    @FXML private TextField nameTag;
+    @FXML private TextField priceTag;
+    
+//Fields From the ShowArticle.fxml file
+    @FXML private TableView<Article> table;
+    @FXML private TableColumn<Article,Integer> tableID;
+    @FXML private TableColumn<Article,String> tableName;
+    @FXML private TableColumn<Article,BigDecimal> TablePrice;
 
-    @FXML
-    private TextField priceTag;
+    public ObservableList<Article> list = FXCollections.observableArrayList();
+
+    public void showResult(){
+        try {
+            PreparedStatement prep = connectDB.getConnection().prepareStatement("Select * From article");
+            prep.executeQuery();
+            ResultSet resultSet =  prep.getResultSet();
+
+            while (resultSet.next()){
+                list.add(new Article(resultSet.getInt("id"),
+                        resultSet.getString("name"),resultSet.getBigDecimal("price")));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        tableID.setCellValueFactory(new PropertyValueFactory<Article,Integer>("id"));
+        tableName.setCellValueFactory(new PropertyValueFactory<Article,String>("name"));
+        TablePrice.setCellValueFactory(new PropertyValueFactory<Article, BigDecimal>("price"));
+        table.setItems(list);
+    }
+
 
     public void createArticle(ActionEvent event){
         if (!nameTag.getText().equals("")) {
