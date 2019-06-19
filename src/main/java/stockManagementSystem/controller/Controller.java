@@ -24,7 +24,12 @@ private ConnectDB connectDB = new ConnectDB();
         if (!nameTag.getText().equals("")) {
             Article article = new Article();
             article.setName(nameTag.getText());
-            article.setPrice(new BigDecimal(priceTag.getText()));
+            if (!priceTag.getText().equals("")){
+                article.setPrice(new BigDecimal(priceTag.getText()));
+            }else {
+                article.setPrice(new BigDecimal(0));
+            }
+
             try {
                 PreparedStatement prep = connectDB.getConnection().prepareStatement(
                         "INSERT INTO article (name,price) VALUE (?,?)"
@@ -37,7 +42,7 @@ private ConnectDB connectDB = new ConnectDB();
             }catch (SQLException se){
                 se.printStackTrace();
             }
-            
+
             nameTag.clear();
             priceTag.clear();
 
