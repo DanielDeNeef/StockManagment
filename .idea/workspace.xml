@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2155de63-61b3-41fc-ac43-ce3bae378d9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/stockManagementSystem/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockManagementSystem/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Article.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Article.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ShowArticles.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ShowArticles.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/menuSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/menuSelection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/view/menuSelection.fxml">
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
@@ -73,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/stockManagementSystem/mainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
+            <state relative-caret-position="420">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,12 +125,12 @@
         <option value="$PROJECT_DIR$/src/main/java/module-info.java" />
         <option value="$PROJECT_DIR$/src/main/java/stockManagementSystem/connectDB/ConnectDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/stockManagementSystem/model/Article.java" />
-        <option value="$PROJECT_DIR$/src/main/java/stockManagementSystem/mainApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/stockManagementSystem/controller/MenuSelection.java" />
         <option value="$PROJECT_DIR$/src/main/resources/view/Article.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/stockManagementSystem/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/resources/view/ShowArticles.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/view/menuSelection.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/stockManagementSystem/mainApp.java" />
       </list>
     </option>
   </component>
@@ -144,7 +141,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -294,7 +291,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
@@ -385,16 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stockManagementSystem/mainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/stockManagementSystem/controller/MenuSelection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -436,6 +423,16 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="81" lean-forward="true" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/stockManagementSystem/mainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
