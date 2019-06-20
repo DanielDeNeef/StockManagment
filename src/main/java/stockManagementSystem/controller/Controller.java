@@ -25,18 +25,21 @@ private ConnectDB connectDB = new ConnectDB();
 //Fields from the Article.fxml file
     @FXML private TextField nameTag;
     @FXML private TextField priceTag;
-    
+
 //Fields From the ShowArticle.fxml file
     @FXML private TableView<Article> table;
     @FXML private TableColumn<Article,Integer> tableID;
     @FXML private TableColumn<Article,String> tableName;
     @FXML private TableColumn<Article,BigDecimal> TablePrice;
+    @FXML private TextField searchTag;
 
     public ObservableList<Article> list = FXCollections.observableArrayList();
 
     public void showResult(){
+        list.clear();
         try {
-            PreparedStatement prep = connectDB.getConnection().prepareStatement("Select * From article");
+            PreparedStatement prep = connectDB.getConnection().prepareStatement("Select * From article WHERE name like ? ");
+            prep.setString(1,"%"+searchTag.getText()+"%");
             prep.executeQuery();
             ResultSet resultSet =  prep.getResultSet();
 
